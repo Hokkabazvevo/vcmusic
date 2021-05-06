@@ -32,7 +32,7 @@ async def addchannel(client, message):
         invitelink = await client.export_chat_invite_link(chid)
     except:
         await message.reply_text(
-            "<b>Tambahkan saya sebagai admin grup Anda terlebih dahulu</b>",
+            "<b>Öncelikle bana yetki vermelisin😋</b>",
         )
         return
 
@@ -43,22 +43,22 @@ async def addchannel(client, message):
 
     try:
         await USER.join_chat(invitelink)
-        await USER.send_message(message.chat.id,"Saya bergabung di sini seperti yang Anda minta")
+        await USER.send_message(message.chat.id,"Sesli sohbete katıldımmm✅")
     except UserAlreadyParticipant:
         await message.reply_text(
-            "<b>Helper sudah ada di obrolan Anda</b>",
+            "<b>Zaten sesli sohbetteyim</b>",
         )
         pass
     except Exception as e:
         print(e)
         await message.reply_text(
-            f"<b>🛑 Flood Wait Error 🛑 \n Assistant {user.first_name} tidak dapat bergabung dengan grup Anda karena banyaknya permintaan bergabung untuk userbot! Pastikan pengguna tidak dibanned dalam grup."
-            "\n\nAtau tambahkan secara manual @botmusikman ke Grup Anda dan coba lagi</b>",
-        )
+            f"<b>🛑 Flood Wait Hatası 🛑 \n Assistant {user.first_name} Userbot grubunuza katılamıyor." 
+"/n/nBanlanmadığından emin olun ya da manuel olarak @botmusikman gruba ekleyin.</b>",
+       
         return
     await message.reply_text(
-            "<b>Helper userbot bergabung dengan obrolan Anda</b>",
-        )
+            "<b>Müzik botu yardımcısı grubunuza katılıyor...</b>",
+        )1
     
 @USER.on_message(filters.group & filters.command(["userbotleave"]))
 async def rem(USER, message):
@@ -66,7 +66,7 @@ async def rem(USER, message):
         await USER.leave_chat(message.chat.id)
     except:  
         await message.reply_text(
-            f"<b>Pengguna tidak dapat meninggalkan grup Anda! Mungkin menunggu floodwaits."
-            "\n\nAtau keluarkan saya secara manual dari ke Grup Anda</b>",
+            f"<b>Müzik botu grubunuzdan ayrılamaz"
+            "\n\nVeya beni manuel olarak çıkarın.</b>",
         )
         return
