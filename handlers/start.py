@@ -23,18 +23,18 @@ from config import BOT_NAME as bn
 @Client.on_message(filters.command("start") & filters.private & ~filters.channel)
 async def start(_, message: Message):
     await message.reply_text(
-        f"""Halo 👋! Saya dapat memutar musik dalam obrolan suara Grup Telegram.\n\n✣ Apakah Anda ingin saya memutar musik di obrolan suara grup Telegram Anda? Silakan klik \'📜 Panduan Menggunakan BOT 📜\' tombol di bawah untuk mengetahui bagaimana cara menggunakan saya.\n\n✣ Tambahkan [Assistant Music Man](https://t.me/botmusikman) ke grup Anda untuk memutar musik di obrolan suara grup Anda.\n\nManaged With ☕️ By [Risman](https://t.me/mrismanaziz)""",
+        f"""Selamm 👋 sesli sohbetlerde şarkı dinlemeniz için kodlanmış robotum.\n\nBeni grubunuza eklemek için tıklayın. \'Kullanma Klavuzu\' Botu nasıl kullanacağınızı öğrenmek için tıklayın.\n\n✣ Ekle [Müzik Bot](https://t.me/MoolMusicBot) Sesli sohbetinizde müzik dinlemek için.\n\nDeveloper By [Zephyrus](https://t.me/Zep_Unb)""",
         reply_markup=InlineKeyboardMarkup(
             [ 
                 [
                     InlineKeyboardButton(
-                        "📜 Panduan Menggunakan BOT 📜", url="https://t.me/Lunatic0de/20")
+                        "Kullanma Klavuzu", url="https://t.me/Zep_Dev")
                   ],[
                     InlineKeyboardButton(
-                        "Group Support", url="https://t.me/SharingUserbot"
+                        "Destek Grubu", url="https://t.me/DepressionalistChat"
                     ),
                     InlineKeyboardButton(
-                        "Channel", url="https://t.me/Lunatic0de"
+                        "Kanal", url="https://t.me/Zep_Dev"
                     )
                 ]
             ]
@@ -49,10 +49,10 @@ async def gstart(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "Group Support", url="https://t.me/SharingUserbot"
+                        "Destek Grubu", url="https://t.me/DepressionalistChat"
                     ),
                     InlineKeyboardButton(
-                        "Owner", url="https://t.me/mrismanaziz"
+                        "Developer", url="https://t.me/Zep_Unb"
                     )
                 ]
             ]
@@ -66,10 +66,10 @@ async def gstart(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "Group Support", url="https://t.me/SharingUserbot"
+                        "Destek Grubu", url="https://t.me/DepressionalistChat"
                     ),
                     InlineKeyboardButton(
-                        "Owner", url="https://t.me/mrismanaziz"
+                        "Developer", url="https://t.me/Zep_Dev"
                     )
                 ]
             ]
